@@ -1,116 +1,94 @@
-Event Booking Project
-Welcome to the Event Booking Project! This is a full-stack application designed to manage events, ticket bookings, and user reservations. It provides a clear separation of roles, allowing users to browse and book events, while admins have full control over event creation and management.
-🎯 Key Features
+# 🎫 Event Booking Project (MERN + MySQL)
 
-User Authentication: Secure user registration and login using JSON Web Tokens (JWT).
-Event Management: A dedicated admin panel for creating, updating, and deleting events.
-Ticket Booking: A seamless process for users to browse upcoming events and book tickets.
-Booking History: Users can easily view and manage their past and upcoming reservations.
-Robust Database: Powered by MySQL for reliable and structured data storage.
+A full-stack event booking system where users can browse events, book tickets, and manage reservations, while admins can create/manage events and track bookings.  
+This project uses **Node.js + Express + MySQL** for the backend and **React (Vite)** for the frontend.
 
-💻 Tech Stack
-This project is built on the MERN stack with a relational database.
-Frontend
+---
 
-React: A component-based JavaScript library for building dynamic user interfaces.
-Vite: A next-generation frontend tool for a fast development experience.
-Axios: A promise-based HTTP client to handle API requests.
+## 📌 Backend Setup (server/)
 
-Backend
-
-Node.js: A powerful JavaScript runtime environment.
-Express.js: A fast and minimalist web framework for Node.js.
-MySQL: The relational database for storing application data.
-JWT: For token-based authentication.
-Bcrypt: For securely hashing and storing user passwords.
-
-⚙️ Getting Started
-Follow these instructions to set up and run the project locally.
-1. Clone the Repository
+### 1. Clone the repository
+```bash
 git clone https://github.com/your-username/Event-Booking-Project.git
-cd Event-Booking-Project
-
-2. Backend Setup
-Navigate to the server/ directory:
-cd server
-
-a. Install Dependencies
+cd Event-Booking-Project/server
+2. Install dependencies
 npm install
 
-b. Configure Environment Variables
-Create a .env file in the server/ folder with the following configuration:
+3. Configure Environment Variables
+
+Create a .env file inside the server/ folder and add:
+
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=your-mysql-password
 DB_NAME=event_booking
+
 JWT_SECRET=your-super-secret-jwt-key
 JWT_EXPIRES_IN=7d
 PORT=5000
 FRONTEND_URL=http://localhost:5173
 
-c. Database Setup
+4. Database Setup (MySQL Workbench)
 
 Open MySQL Workbench.
-Create a new connection to your local MySQL instance.
-Open a new SQL query tab.
-Copy the contents of the event_booking.sql file and paste them into the query tab.
-Execute the script to create the database and tables, including sample data.
 
-d. Run the Server
+Create a new connection using your credentials (replace password with yours).
+
+Open the connection and create a new SQL query tab.
+
+Copy-paste the contents of event_booking.sql (provided in this repo).
+
+Execute the script ✅ to create the database and tables.
+
+5. Run the Backend
 npm run dev
 
-The backend server will run on http://localhost:5000.
-3. Frontend Setup
-Navigate to the client/ directory:
+
+Backend will start on http://localhost:5000
+
+📌 Frontend Setup (client/)
+1. Move into client folder
 cd ../client
 
-a. Install Dependencies
+2. Install dependencies
 npm install
 
-b. Configure Environment Variables
-Create a .env file in the client/ folder with the following:
+3. Configure Environment Variables
+
+Create a .env file inside the client/ folder and add:
+
 VITE_BACKEND_URL=http://localhost:5000
 
-c. Run the Application
+4. Run the Frontend
 npm run dev
 
-The frontend application will start on http://localhost:5173.
+
+Frontend will start on http://localhost:5173
+
+🚀 Deployment
+
+Backend: Can be deployed on Render
+ (Root Directory = server)
+
+Frontend: Can be deployed on Vercel
+ or Netlify
+ (Build output = dist)
+
 📂 Project Structure
 Event-Booking-Project/
-│
-├── client/                  # React (Vite) frontend
-│   ├── src/
-│   │   ├── components/      # Reusable React components
-│   │   ├── pages/           # Main application pages
-│   │   ├── App.jsx          # Main application component
-│   │   └── main.jsx         # Entry point
-│   ├── .env
-│   ├── package.json
-│   └── vite.config.js
-│
-├── server/                  # Node.js + Express backend
-│   ├── controllers/         # Logic for handling requests
-│   ├── middleware/          # Middleware functions (e.g., auth)
-│   ├── models/              # Database schema and queries
-│   ├── routes/              # API endpoints
-│   ├── .env
-│   ├── package.json
-│   └── server.js            # Entry point for the server
-│
-├── event_booking.sql        # MySQL database schema and initial data
-└── README.md
+│── client/   # React (Vite) frontend
+│── server/   # Node.js + Express backend
+│── event_booking.sql # Database schema
+│── README.md
 
-☁️ Deployment
+✅ Features
 
-Backend: Deploy on Render or Vercel with the root directory set to server.
-Frontend: Deploy on Netlify or Vercel with the build output directory set to dist.
+User authentication with JWT
 
-🙏 Credits
+Browse upcoming events
 
-Node.js
-Express.js
-React
-MySQL
+Book tickets
 
-🤝 Contributing
-Feel free to contribute, report issues, or suggest new features! Fork the repository, create a new branch, and submit a pull request.
+Admin can create/manage events
+
+MySQL database integration
