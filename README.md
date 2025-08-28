@@ -40,7 +40,7 @@ Create a new connection using your credentials (replace password in .env with yo
 
 Open the connection and create a new SQL query tab.
 
-Copy-paste the contents of event_booking.sql (provided in this repo).
+Copy-paste the contents of event_booking.sql (provided in server folder).
 
 Execute the script ✅ to create the database and tables.
 
@@ -69,20 +69,11 @@ npm run dev
 
 Frontend will start on http://localhost:5173
 
-🚀 Deployment
-
-Backend: Can be deployed on Render
- (Root Directory = server)
-
-Frontend: Can be deployed on Vercel
- or Netlify
- (Build output = dist)
 
 📂 Project Structure
 Event-Booking-Project/
 │── client/   # React (Vite) frontend
 │── server/   # Node.js + Express backend
-│── event_booking.sql # Database schema
 │── README.md
 
 ✅ Features
