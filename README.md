@@ -32,7 +32,7 @@ FRONTEND_URL=http://localhost:5173
 
 Open MySQL Workbench.
 
-Create a new connection using your credentials (replace password with yours).
+Create a new connection using your credentials (replace password in .env with yours).
 
 Open the connection and create a new SQL query tab.
 
