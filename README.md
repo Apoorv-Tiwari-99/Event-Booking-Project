@@ -1,7 +1,7 @@
-# 🎫 Event Booking Project (MERN + MySQL)
+# 🎫 Event Booking Project (MERN + MySQL+ Socket.IO)
 
 A full-stack event booking system where users can browse events, book tickets, and manage reservations, while admins can create/manage events .  
-This project uses **Node.js + Express + MySQL** for the backend and **React (Vite)** for the frontend.
+This project uses **Node.js + Express + MySQL** for the backend and **React (Vite)** for the frontend , and **Socket.IO** for real-time seat availability.
 
 ---
 
@@ -70,11 +70,12 @@ npm run dev
 Frontend will start on http://localhost:5173
 
 
-📂 Project Structure
-Event-Booking-Project/
-│── client/   # React (Vite) frontend
-│── server/   # Node.js + Express backend
+📂 Event-Booking-Project/
+│── client/              # React (Vite) frontend
+│── server/              # Node.js + Express backend
+│   ├── event_booking.sql # Database schema
 │── README.md
+
 
 ✅ Features
 
@@ -83,6 +84,8 @@ User authentication with JWT
 Browse upcoming events
 
 Book tickets
+
+Real-time seat availability using Socket.IO
 
 Admin can create/manage events
 
