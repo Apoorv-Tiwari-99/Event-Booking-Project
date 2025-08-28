@@ -1,6 +1,6 @@
 # 🎫 Event Booking Project (MERN + MySQL)
 
-A full-stack event booking system where users can browse events, book tickets, and manage reservations, while admins can create/manage events and track bookings.  
+A full-stack event booking system where users can browse events, book tickets, and manage reservations, while admins can create/manage events .  
 This project uses **Node.js + Express + MySQL** for the backend and **React (Vite)** for the frontend.
 
 ---
@@ -9,8 +9,12 @@ This project uses **Node.js + Express + MySQL** for the backend and **React (Vit
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/Event-Booking-Project.git
+Firt Create a folder name Event-Booking-Project
+
+git clone https://github.com/Apoorv-Tiwari-99/Event-Booking-Project.git
+
 cd Event-Booking-Project/server
+
 2. Install dependencies
 npm install
 
